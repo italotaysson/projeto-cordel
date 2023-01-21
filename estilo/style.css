@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*link da font 'passion*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+/*Link da fonte Sriracha*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do cabeçalho e rodapé*/
+    --fonte2: 'Passion One', cursive; /*Títulos*/
+    --fonte3: 'Sriracha', cursive; /*Conteúdo*/
+}
+* {
+
+    /* Configurações gerais: para resetar todos os elementos, retira todos os espaços do texto pré definido */
+    margin:0px;
+    padding: 0px;
+}
+
+html,body {
+    min-height: 100vh; /*tamanho minimo do corpo*/
+    background-color: darkgrey; /*Cor de fundo*/
+    font-family: var(--fonte1);
+}
+
+header {
+    /*Cabeçalho Cor de fundo, cor da letra e texto centralizado.*/
+    background-color: black;
+    color: white ;
+    text-align: center;
+    
+}
+
+header > h1 {
+    /*Preenchimento do topo, texto com letras maiusculas mas as inicias maiores*/
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 7vw; /*Tamanho da fonte de acordo como meche a tela*/
+}
+
+header > p {
+    padding-bottom: 50px; /*Preenchimento inferior*/
+}
+
+header a, footer a {
+    /*Configuração dos links: Cor da letra branca, link sem linha embaixo, fonte forte*/
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    /*Linha ao passar o mouse nos links*/
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh; /*Espaçamento para o efeito paralax*/
+    padding-bottom: 10vh; /*Espaçamento para o efeito paralax*/
+    line-height: 2em; /*Espaço entre as palavras*/ 
+    padding-left: 30px; /*Preenchimento a esquerda*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /*Tamanho da fonte de acordo como meche a tela*/
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    /*Classe normal: Cor branca de fundo, letra preta*/
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    /*Classe imagem: Cor de fundo cinza, letra branca*/
+    background-color: rgb(51,51,51);
+    color: white;
+    box-shadow:inset 6px 6px 13px 0px rgba(0, 0, 0, 0.425);
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    /*Os paragráfos que estiverem dentro da classe imagem terá um tamanho e cor de fundo definido. */
+    display:inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.507);
+    text-shadow: 1px 1px 0px black;
+    
+}
+section#img01 {
+background-image: url(../imagens/background001.jpg);
+background-position: right center;
+background-size: cover;
+}
+
+section#img02 {
+background-image: url(../imagens/background002.jpg );
+background-size: cover;
+}
+footer {
+
+    /*Rodapé: Cor de fundo preto, cor da letra branco, texto centralizado, preenchimento */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    
+}
